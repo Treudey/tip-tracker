@@ -4,46 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Tip Tracker</title>
 </head>
 <body>
   <h1>Tip Calculator</h1>
   <main>
-    <div class="form-group">
-      <label for="float">Float:</label>
+    <div>
+      <label for="float"><span> Float:</span></label>
       <input type="number" id="float" name="float" value="0">
     </div>
-    <div class="form-group">
-      <label for="cash-on-hand">Cash On Hand:</label>
+
+    <div>
+      <label for="cash-on-hand"><span>Cash On Hand:</span></label>
       <input type="number" id="cashOnHand" name="cash-on-hand" value="0">
-      <span> − </span><span id="floatSubtract">0</span>
-      <span> = $</span><span id="cashTotal">0</span>
+      <p> − <span id="floatSubtract">0</span></p>
     </div>
-    <div class="form-group">
-      <label for="cash-sales">Cash Sales:</label>
+    <div>
+      <label for="coh-minus-float"><span>COH w/o Float:</span></label>
+      <p class="amount" name="coh-minus-float">$<span id="cashTotal">0</span></p>
+    </div>
+    <div>
+      <label for="cash-sales"><span>Cash Sales:</span></label>
       <input type="number" id="cashSales" name="cash-sales" value="0">
     </div>
-    <div class="form-group">
-      <label for="cash-tips">Cash Tips:</label>
-      <span>$</span><p id="cashTips" name="cash-tips">0</p>
+    <div>
+      <label for="cash-tips"><span>Cash Tips:</span></label>
+      <p class="amount" name="cash-tips">$<span id="cashTips" >0</span></p>
     </div>
-    <div class="form-group">
-      <label for="dc-tips">Debit/Credit Tips:</label>
+    <div>
+      <label for="dc-tips"><span>D/C Tips:</span></label>
       <input type="number" id="dcTips" name="dc-tips" value="0">
     </div>
-    <div class="form-group">
-      <label for="tipout">Tipout:</label>
+    <div>
+      <label for="tipout"><span>Tipout:</span></label>
       <input type="number" id="tipout" name="tipout" value="0">
     </div>
-    <div class="form-group">
-      <label for="owed">What I Owe:</label>
-      <span>$</span><p id="owed" name="owed">0</p>
+    <div>
+      <label for="owed"><span>What I Owe:</span></label>
+      <p class="amount" name="owed">$<span id="owed">0</span></p>
     </div>
-    <div class="form-group">
-      <label for="tips">Tips:</label>
-      <span>$</span><p id="tips" name="tips">0</p>
+    <div>
+      <label for="tips"><span>Tips:</span></label>
+      <p class="amount" name="tips">$<span id="tips">0</span></p>
     </div>
+    
+    
+   
+   
+    
+    
   </main>
 
   <script src="./assets/js/app.js"></script>
