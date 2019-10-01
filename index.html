@@ -9,16 +9,16 @@
   <title>Tip Tracker</title>
 </head>
 <body>
-  <h1>Tip Calculator</h1>
+  <h1>Tip Tracker</h1>
   <main>
     <div>
       <label for="float"><span> Float:</span></label>
-      <input type="number" id="float" name="float" value="0">
+      <input type="number" id="float" name="float">
     </div>
 
     <div>
       <label for="cash-on-hand"><span>Cash On Hand:</span></label>
-      <input type="number" id="cashOnHand" name="cash-on-hand" value="0">
+      <input type="number" id="cashOnHand" name="cash-on-hand" >
       <p> − <span id="floatSubtract">0</span></p>
     </div>
     <div>
@@ -27,29 +27,30 @@
     </div>
     <div>
       <label for="cash-sales"><span>Cash Sales:</span></label>
-      <input type="number" id="cashSales" name="cash-sales" value="0">
+      <input type="number" id="cashSales" name="cash-sales">
     </div>
     <div>
       <label for="cash-tips"><span>Cash Tips:</span></label>
       <p class="amount" name="cash-tips">$<span id="cashTips" >0</span></p>
     </div>
     <div>
-      <label for="dc-tips"><span>D/C Tips:</span></label>
-      <input type="number" id="dcTips" name="dc-tips" value="0">
+      <label for="dc-tips"><span>Debit/Credit Tips:</span></label>
+      <input type="number" id="dcTips" name="dc-tips">
     </div>
     <div>
       <label for="tipout"><span>Tipout:</span></label>
-      <input type="number" id="tipout" name="tipout" value="0">
+      <input type="number" id="tipout" name="tipout">
     </div>
     <div>
-      <label for="owed"><span>What I Owe:</span></label>
+      <label for="owed"><span>I Owe*:</span></label>
       <p class="amount" name="owed">$<span id="owed">0</span></p>
     </div>
     <div>
-      <label for="tips"><span>Tips:</span></label>
+      <label for="tips"><span>My Tips:</span></label>
       <p class="amount" name="tips">$<span id="tips">0</span></p>
     </div>
-    
+    <br>
+    <p>* if this number is negative then the tellers owe you</p>
     
    
    
