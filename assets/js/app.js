@@ -45,7 +45,7 @@ class Field {
     }
   }
   
-  eventHandler = () => {
+  eventHandler() {
     if (this.type === 'input') {
       state[this.stateKey] = this.element.value !== '' ? parseFloat(this.element.value) : 0;
       this.elementsToTrigger.forEach(el => {
@@ -58,7 +58,7 @@ class Field {
 
   setupEventListeners() {
     this.eventsListeningFor.forEach(event => {
-      this.element.addEventListener(event, this.eventHandler);
+      this.element.addEventListener(event, this.eventHandler.bind(this));
     });
   }
 }
