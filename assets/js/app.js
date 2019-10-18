@@ -30,12 +30,12 @@ const valueChangeEvent = new CustomEvent("valueChange");
 
 // A class to define each html elelment that's going to be manipulated
 class Field {
-  elementsToTrigger = [];
   constructor(domStr, stateKey, type, elementsToTrigger, eventsListeningFor) {
     this.type = type;
     this.domStr = domStr;
     this.stateKey = stateKey;
     this.element = document.getElementById(domStr);
+    this.elementsToTrigger = [];
     if (this.type === 'input') {
       this.elementsToTrigger = elementsToTrigger;
       this.eventsListeningFor = eventsListeningFor;
@@ -48,7 +48,6 @@ class Field {
   eventHandler = () => {
     if (this.type === 'input') {
       state[this.stateKey] = this.element.value !== '' ? parseFloat(this.element.value) : 0;
-      console.log(state[this.stateKey]);
       this.elementsToTrigger.forEach(el => {
         setTimeout(() => { document.getElementById(el).dispatchEvent(valueChangeEvent) });
       });
@@ -58,7 +57,6 @@ class Field {
   }
 
   setupEventListeners() {
-    console.log(this.elementsToTrigger);
     this.eventsListeningFor.forEach(event => {
       this.element.addEventListener(event, this.eventHandler);
     });
@@ -137,4 +135,5 @@ const fieldArray = [
     ['valueChange']
   )
 ];
+
 fieldArray.forEach(field => field.setupEventListeners());
